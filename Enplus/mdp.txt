@@ -1,0 +1,64 @@
+OVH
+
+isabelle
+id: di16973-ovh
+mdp: E-007;l@nSd@le]
+
+moi
+kl19263-ovh
+Jgf0zE,)643_!
+
+***********************************************************************************************************************
+
+WORDPRESS
+
+LOCALHOST
+douceursetvolupte
+152500
+
+douceursetvolupte.com
+douceursetvolupte
+C@ome!152500
+
+jetpack utilise wordpress.com
+tensai.sendo@gmail.com
+KsGTXAp479576
+
+akismet utilise wordpress.com
+tensai.sendo@gmail.com
+tensaisendo
+KsGTXAp479576
+
+
+
+
+***********************************************************************************************************************
+
+> Serveur FTP             : ftp.douceursetvolupte.com ou ftp.cluster017.ovh.net
+> Utilisateur (login)     : douceursci
+> Mot de passe (password) : Nrg8KHRgeS59
+
+E-MAIL
+------
+> Serveur POP/IMAP :  pop3.douceursetvolupte.com ou ns0.ovh.net (port 110)
+> Serveur SMTP     : smtp.douceursetvolupte.com ou ns0.ovh.net (port 587 au lieu de 25)
+
+Pour passer par le serveur e-mail sécurisé (SSL), vous devrez apporter les changements suivants :
+> Serveur POP/IMAP : ssl0.ovh.net (port 995 au lieu de 110)
+> Serveur SMTP     : ssl0.ovh.net (port 465 au lieu de 25)
+
+Les identifiants à utiliser pour chaque compte e-mail sont de la forme :
+> Utilisateur (login)     : compte@douceursetvolupte.com (remplacez "compte" par le compte existant à utiliser)
+> Mot de passe (password) : (indiquez le mot de passe défini lors de la création du compte)
+
+Pour vous aider dans la configuration de votre messagerie : http://guides.ovh.com/ConfigurationEmail/
+
+WEBMAIL : Un webmail vous permet d'utiliser vos e-mails depuis toute connexion Internet. L'accès se fait en indiquant votre
+adresse e-mail (compte POP) et son mot de passe : https://ssl0.ovh.net/
+
+MySQL:
+ Serveur        : douceursciisa.mysql.db
+ Utilisateur    : douceursciisa
+ Nom de la base : douceursciisa
+
+ Mot de passe   : 5NbuHNvrruxE

@@ -1,0 +1,46 @@
+/*
+Theme Name:     Customizr Child
+Theme URI:      http://customizr.com/
+Description:    Thème enfant pour le thème Customizr
+Author:         Laurent Khauv
+Author URI:     http://www.linkedin.com/lkhauv
+Template:       customizr                            
+Version:        0.1.0
+*/
+
+@import url("../customizr/style.css");
+
+/* TITRE  */
+.row-fluid .span3 {
+	width: 100%;
+}
+
+h1 .site-title {
+	font-family : "Helvetica Neue", Arial, sans-serif;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: -2px;
+	line-height: 1.2em;
+	color: #CF0A1D;
+}
+
+/* SEARCHBOX */
+.searchform {
+	margin: 0 0 0;
+	height: 40px;
+	width: 150px;
+}
+
+.searchform div {
+	height: 40px;
+}
+.searchform #searchsubmit {
+	width: 100px;	
+}
+
+/* FOOTER */
+.row-fluid .credits {
+	width : 42%;
+}

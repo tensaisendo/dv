@@ -1,0 +1,64 @@
+header {
+	text-align: center;
+}
+
+header .site-title{
+	font-family : "NK_Monotype Corsiva", "Helvetica Neue", Arial, sans-serif;
+	font-size: 60px;
+	font-style: normal;
+	letter-spacing: 10px;
+	line-height: 1.2em;
+	color: #9F0C2E; /* #910a2a #980b2c */
+}
+
+#site-navigation {
+    /* margin-left: 17%; */
+    /* margin-right: 3%; */
+    width: 100%;
+}
+
+.nav-menu ul {
+	list-style: none;
+	padding: 0;
+}
+
+.nav-menu ul li {
+	display: inline-block;
+    margin-right: 35px;
+	text-transform: uppercase;
+	font-family: texgyreadventorbold, "Helvetica Neue", Arial, sans-serif;
+}
+
+.nav-menu ul li a {
+	color: #9F0C2E; /* #CF0A1D */
+}
+
+.nav-menu ul li.current_page_item a {
+	color: black;
+}
+
+.nav-menu, form {
+	display: inline-block;
+}
+
+form input.search-field{
+	margin-bottom: 0;
+	background-color: transparent;
+	background-image: url(../img/search-icon.png);
+	background-position: 5px center;
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	border: none;
+	cursor: pointer;
+	height: 37px;
+	margin: 0;
+	padding: 0 0 0 32px;
+	position: relative;
+	-webkit-transition: width 400ms ease, background 400ms ease;
+	transition: width 400ms ease, background 400ms ease;
+	width: 0;
+}
+
+form .search-submit {
+	display: none;
+}
