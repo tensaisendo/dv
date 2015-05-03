@@ -1,0 +1,22 @@
+div.singletitle{
+    text-align: center;
+}
+
+div.singletitle h2{
+    font-size: 40pt;
+}
+
+div.single_thumbnail{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+div.single_thumbnail div.verticalblock{
+    height: 401px;
+    position: absolute;
+    width: 100px;
+    background-color: #C6362B;
+    margin-left: 376px;
+}
+
+div.single_thumbnail img{ margin-left: 70px; }

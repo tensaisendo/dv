@@ -628,6 +628,9 @@ function insert_css_in_head() {
 
     wp_register_style('bootstrapcss', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.0.0', 'all');
     wp_enqueue_style('bootstrapcss');
+
+    wp_register_style('style_single', get_template_directory_uri() . '/css/single.css','',false,'screen');
+    wp_enqueue_style( 'style_single');
 	
 }
 

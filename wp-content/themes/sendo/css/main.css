@@ -31,4 +31,11 @@ html body a:hover h1, #main a:hover{ color: #CF0A1D; } /* liens couleur différe
 	width: 100%;
 }
 
-#main{ padding-left: 50px; }
+#main{ padding-left: 50px; padding-right: 50px; }
+
+div#page div#main div#primary div#content div.postarea h2.single-title a{
+    font-size: 50pt;
+    text-align: center;
+}
+
+div#page a{ color: #C6362B; }

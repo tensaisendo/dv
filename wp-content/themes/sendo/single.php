@@ -22,15 +22,25 @@ get_header(); ?>
                               sendo_post_nav(); ?>
                     </div>
 
-                    <h2 class="singletitle"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+                    <div class="singletitle">
+                        <h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+                    </div>
 
-                    <?php if ( has_post_thumbnail() ) {
-                              the_post_thumbnail('large');?> <br /> <?php
-                              echo get_post(get_post_thumbnail_id())->post_excerpt;
-                          }
-                          the_content(); ?>
+                    <div class="singlepost">
+                        <?php if ( has_post_thumbnail() ) {
+                                echo '<div class="single_thumbnail">';
+                                    echo '<div class="verticalblock"></div>';
+                                    the_post_thumbnail('large');
+                                echo '</div>';
+
+                                echo '<div class="single_posttext">';
+                                echo get_post(get_post_thumbnail_id())->post_excerpt;
+                                the_content();
+                                echo '</div>';
+                              }
+                        ?>
+                    </div>
                     <div class="byline">
-                        <span><?php the_time('j F Y'); ?></span>  <br />
                         <span><?php comments_number('','1 commentaire','% commentaires'); ?></span>
                     </div>
                 <?php
