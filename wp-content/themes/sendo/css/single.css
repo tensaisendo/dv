@@ -14,9 +14,11 @@ div.single_thumbnail{
 div.single_thumbnail div.verticalblock{
     height: 401px;
     position: absolute;
-    width: 100px;
+    width: 170px;
     background-color: #C6362B;
-    margin-left: 376px;
+    margin-left: 283px;
 }
 
-div.single_thumbnail img{ margin-left: 70px; }
+div.single_thumbnail div.verticalblock p{ padding-top: 280px; color: #FFFFFF; }
+
+div.single_thumbnail img{ margin-left: 170px; }

@@ -64,7 +64,7 @@ define ( 'DB_CHARSET', 'utf8' );
 
         <div id="navbar" class="navbar row">
             <nav id="site-navigation" class="navigation main-navigation col-md-offset-2 col-md-8 col-md-offset-2" role="navigation">
-                <?php wp_nav_menu(   array(  'theme_location' => 'nav-menu',  'menu_class' => 'nav-menu'  )  ); ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'nav-menu', 'menu_class' => 'nav-menu' ) ); ?>
                 <?php get_search_form(); ?>
             </nav><!-- #site-navigation -->
         </div><!-- #navbar -->

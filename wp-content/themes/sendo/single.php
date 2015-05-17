@@ -29,15 +29,15 @@ get_header(); ?>
                     <div class="singlepost">
                         <?php if ( has_post_thumbnail() ) {
                                 echo '<div class="single_thumbnail">';
-                                    echo '<div class="verticalblock"></div>';
+                                    echo '<div class="verticalblock"><p>';
+                                    echo get_post(get_post_thumbnail_id())->post_excerpt;
+                                    echo '</p></div>';
                                     the_post_thumbnail('large');
                                 echo '</div>';
-
-                                echo '<div class="single_posttext">';
-                                echo get_post(get_post_thumbnail_id())->post_excerpt;
-                                the_content();
-                                echo '</div>';
                               }
+                              echo '<div class="single_posttext">';
+                              the_content();
+                              echo '</div>';
                         ?>
                     </div>
                     <div class="byline">

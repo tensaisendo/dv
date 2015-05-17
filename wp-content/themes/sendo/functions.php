@@ -94,7 +94,7 @@ function sendo_setup() {
     ) );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menu( 'primary', __( 'Navigation Menu', 'twentythirteen' ) );
+    register_nav_menu( 'primary', __( 'Navigation Menu', 'sendo' ) );
 
 	/*
 	 * This theme uses a custom image size for featured images, displayed on
@@ -626,12 +626,17 @@ function insert_css_in_head() {
     wp_register_style('style_capty', get_template_directory_uri() . '/css/capty.css','',false,'screen');
     wp_enqueue_style( 'style_capty' );
 
-    wp_register_style('bootstrapcss', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.0.0', 'all');
-    wp_enqueue_style('bootstrapcss');
+
 
     wp_register_style('style_single', get_template_directory_uri() . '/css/single.css','',false,'screen');
     wp_enqueue_style( 'style_single');
-	
+
+    wp_register_style('style_responsive', get_template_directory_uri() . '/css/responsive.css','',false,'screen');
+    wp_enqueue_style( 'style_responsive');
+
+
+    wp_register_style('bootstrapcss', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.0.0', 'all');
+    wp_enqueue_style('bootstrapcss');
 }
 
 /**
@@ -688,3 +693,31 @@ function bootstrap_styles(){
 }
 add_action('wp_enqueue_scripts', 'bootstrap_styles');
 */
+
+/* afficher une liste d'articles selon catégories */
+/* [post-by-category category="nom_categorie"] */
+function jc_post_by_category($atts, $content = null) {
+    extract(shortcode_atts(array(
+        "nb" => '5',
+        "orderby" => 'post_date',
+        "order" => 'DESC',
+        "category" => '1'
+    ), $atts));
+
+    global $post;
+    $tmp_post = $post;
+    $myposts = get_posts('showposts='.$nb.'&orderby='.$orderby.'&category='.$category);
+    $out = '<ul>';
+
+    foreach($myposts as $post){
+        setup_postdata( $post );
+        $out .= '<li><a href="'.get_permalink().'">'.the_title("","",false).'</a></li>';
+    }
+
+    $out .= '</ul>';
+    wp_reset_postdata();
+    $post = $tmp_post;
+
+    return $out;
+}
+add_shortcode("post-by-category", "jc_post_by_category");
