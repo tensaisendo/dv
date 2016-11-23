@@ -1,4 +1,13 @@
-<?php
+<?php 
+
+# BEGIN WP OPTIMIZE BY XTRAFFIC - ADVANCED CACHE #
+define('WP_CACHE', true); // Enable cache feature. Added by Wp Optimize Speed By xTraffic
+# END WP OPTIMIZE BY XTRAFFIC - ADVANCED CACHE #
+
+/** Enable W3 Total Cache */
+// Added by W3 Total Cache
+
+
 /**
  * La configuration de base de votre installation WordPress.
  *
@@ -19,16 +28,16 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define('DB_NAME', 'douceursetvolupte');
+define('DB_NAME', 'localhost'); // PROD douceursciisa
 
 /** Utilisateur de la base de données MySQL. */
-define('DB_USER', 'root');
+define('DB_USER', 'root'); // PROD douceursciisa
 
 /** Mot de passe de la base de données MySQL. */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', ''); // PROD 45jVlmNeKL34
 
 /** Adresse de l'hébergement MySQL. */
-define('DB_HOST', 'localhost');
+define('DB_HOST', ''); // PROD douceursciisa.mysql.db
 
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
 define('DB_CHARSET', 'utf8');
@@ -49,14 +58,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '|RxMsw$v<=/_YZiA85StFo!0:Y+?x>n(NY=b/FF5YP1OE`@/=^oN:-n~xyI2FRGH');
-define('SECURE_AUTH_KEY',  ':Su#*^OU/cgF$}{|GXU=*csQ@l(oF5F##l$sI~AqF8D19o_cc.S?N#5Xp?R]86{Z');
-define('LOGGED_IN_KEY',    'l)|)J.Qock`f5m9dGp$ nGHnu;;7CSI-9y]$KM$aH$O!L#+6%+jnoy=[>huNy$Ct');
-define('NONCE_KEY',        '|eS`QI5]3o*5h.NQp{bGy*XH]O09o{=$yw~zw~g9^]OzOA+_u>VxQ+Rnpasas/3/');
-define('AUTH_SALT',        'D)w^a];||Q8j+O7 ZxJ$e5%z5)Irj`p@);u+cuz<Sd!#-v8)oP1+QrL> a*f>9;*');
-define('SECURE_AUTH_SALT', '/I1a;t:YyQ_%b~}N7xKOp-k/2>}I!aQ#(QJ!Eh-~^Xu/eNLz3:|HhFkT g|ixjXs');
-define('LOGGED_IN_SALT',   'n+{n4.qrg9S>GqH(Sao{KJ|6-y;[;oF.liE@>-rn~d/$.1v++Djr=P&S:xUk&-}%');
-define('NONCE_SALT',       ':3M|Y1u}pT;[,pkQS`nu/Y9 ;}`SOK[PMpU4^/1OU`XKmxsTKpg:V@7!6t0WD9TN');
+define('AUTH_KEY',         '|+O*>DW4)-:vWd!:2]Q#|RMaaCfOU[Sl{1~99>[Wf_`qqx;$]/Yif}Q|eK#c~-M~');
+define('SECURE_AUTH_KEY',  'H:hoLU-CO)(jNXtKw?i%?a`|}%.BL/;as^Zfgh)}P]W5G/Mf04+5(&hBx_P_!+d5');
+define('LOGGED_IN_KEY',    'O+*|5q]/>p{~X.R$xSWDeX&boIm.y,2{9+`-LR#(v=).ms,65u*8Kk,PtwG|mT)D');
+define('NONCE_KEY',        'l#U@A]tZ>E5dm-?.](2GGbK{IV1_RLv5!.oZ^INocF~6J@@8<X~9L|cQ+,.INd&L');
+define('AUTH_SALT',        'Hfwx*5>1X^{@N<PXjW4aQ)^M9$Q1D|d;t]b-+M>J>`hH,Qs[h^+7)Lh+f(;BSs@ ');
+define('SECURE_AUTH_SALT', '+c(I c-[H1e?*P8-AlRr9?*V]6yy -p ?+]FY$?Q>O:LQl2C0|WV%app62Z&Yr7[');
+define('LOGGED_IN_SALT',   'zjHF!o6YfK!#vMIoAzS jcC=tFP+c.l0f,_Od;D,ZtU:yAf!LWSlo~;%~.`w3z+]');
+define('NONCE_SALT',       '<sgS3~`-mz<[j+wsv$T|5{XfIJ:2P(G1,B*a?nny-Mz!)>2+E(g/SKURP*zN2fVp');
 /**#@-*/
 
 /**
@@ -66,7 +75,7 @@ define('NONCE_SALT',       ':3M|Y1u}pT;[,pkQS`nu/Y9 ;}`SOK[PMpU4^/1OU`XKmxsTKpg:
  * si vous leur donnez chacune un préfixe unique. 
  * N'utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés!
  */
-$table_prefix  = 'wp_';
+$table_prefix  = 'wp_'; // PROD wp_douceursciisa_
 
 /**
  * Langue de localisation de WordPress, par défaut en Anglais.

@@ -3,8 +3,8 @@ Contributors: spyrosvl
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RHE22U984DL9C
 Tags: posts widget, categories posts widget, post with thumb widget, latest posts
 Requires at least: 3.2
-Tested up to: 3.5.1
-Stable tag: 1.0.1
+Tested up to: 4.1.1
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,7 @@ Simple SEO Categories Posts is a plugin/widget, for displaying on your site the 
 * Categories IDs
 * Number of posts
 * Display Title
+* Title Tag
 * Display Thumb
 * Thumb Width
 * Thumb Height
@@ -37,7 +38,7 @@ Simple SEO Categories Posts is a plugin/widget, for displaying on your site the 
 * Date Order
 * Author Order
 
-[Detailed description and guide](https://www.hostdog.gr/en/blog/simple-seo-categories-posts-widget-wordpress)
+Brought to you by [hostivate.com](https://www.hostivate.com) and [nitroweb.gr](http://www.nitroweb.gr)
 
 == Installation ==
 
@@ -55,9 +56,20 @@ Please use the support forum of the plugin on wordpress.org
 
 == Changelog ==
 
+= 1.0.4 =
+
+* Minor code change to support q/x/Translate
+
+= 1.0.3 =
+
+* Added actions and filters
+* Added option for the Title HTML Tag
+* Removed custom excerpt function. Using WordPress function now
+* The widget now gets te content instead of the excerpt and limits its words.
+
 = 1.0.1 =
 
-Removed two lines from the query to make it work with custom post types
+* Removed two lines from the query to make it work with custom post types
 
 = 1.0.0 =
 

@@ -7,16 +7,21 @@
 add_action( 'wpcf7_submit', 'wpcf7_flamingo_submit', 10, 2 );
 
 function wpcf7_flamingo_submit( $contactform, $result ) {
+	if ( ! class_exists( 'Flamingo_Contact' )
+	|| ! class_exists( 'Flamingo_Inbound_Message' ) ) {
+		return;
+	}
+
+	if ( $contactform->in_demo_mode()
+	|| $contactform->is_true( 'do_not_store' ) ) {
+		return;
+	}
+
 	$cases = (array) apply_filters( 'wpcf7_flamingo_submit_if',
 		array( 'spam', 'mail_sent', 'mail_failed' ) );
 
 	if ( empty( $result['status'] )
 	|| ! in_array( $result['status'], $cases ) ) {
-		return;
-	}
-
-	if ( ! class_exists( 'Flamingo_Contact' )
-	|| ! class_exists( 'Flamingo_Inbound_Message' ) ) {
 		return;
 	}
 
@@ -34,6 +39,8 @@ function wpcf7_flamingo_submit( $contactform, $result ) {
 	foreach ( $fields_senseless as $tag ) {
 		$exclude_names[] = $tag['name'];
 	}
+
+	$exclude_names[] = 'g-recaptcha-response';
 
 	foreach ( $posted_data as $key => $value ) {
 		if ( '_' == substr( $key, 0, 1 ) || in_array( $key, $exclude_names ) ) {
@@ -58,9 +65,11 @@ function wpcf7_flamingo_submit( $contactform, $result ) {
 
 	$akismet = isset( $submission->akismet ) ? (array) $submission->akismet : null;
 
-	Flamingo_Contact::add( array(
-		'email' => $email,
-		'name' => $name ) );
+	if ( 'mail_sent' == $result['status'] ) {
+		Flamingo_Contact::add( array(
+			'email' => $email,
+			'name' => $name ) );
+	}
 
 	$channel_id = wpcf7_flamingo_add_channel(
 		$contactform->name(), $contactform->title() );
@@ -161,5 +170,3 @@ function wpcf7_flamingo_add_channel( $slug, $name = '' ) {
 
 	return (int) $channel['term_id'];
 }
-
-?>
