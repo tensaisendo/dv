@@ -5,7 +5,7 @@
  * Ce fichier contient les réglages de configuration suivants : réglages MySQL,
  * préfixe de table, clés secrètes, langue utilisée, et ABSPATH.
  * Vous pouvez en savoir plus à leur sujet en allant sur
- * {@link http://codex.wordpress.org/fr:Modifier_wp-config.php Modifier
+ * {@link https://fr.wordpress.org/support/article/editing-wp-config-php/ Modifier
  * wp-config.php}. C’est votre hébergeur qui doit vous donner vos
  * codes MySQL.
  *
@@ -13,6 +13,8 @@
  * le processus d’installation. Vous n’avez pas à utiliser le site web, vous
  * pouvez simplement renommer ce fichier en "wp-config.php" et remplir les
  * valeurs.
+ *
+ * @link https://fr.wordpress.org/support/article/editing-wp-config-php/
  *
  * @package WordPress
  */
@@ -43,7 +45,7 @@ define('DB_COLLATE', '');
  *
  * Remplacez les valeurs par défaut par des phrases uniques !
  * Vous pouvez générer des phrases aléatoires en utilisant
- * {@link https://api.wordpress.org/secret-key/1.1/salt/ le service de clefs secrètes de WordPress.org}.
+ * {@link https://api.wordpress.org/secret-key/1.1/salt/ le service de clés secrètes de WordPress.org}.
  * Vous pouvez modifier ces phrases à n’importe quel moment, afin d’invalider tous les cookies existants.
  * Cela forcera également tous les utilisateurs à se reconnecter.
  *
@@ -66,25 +68,25 @@ define('NONCE_SALT',       'put your unique phrase here');
  * si vous leur donnez chacune un préfixe unique.
  * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !
  */
-$table_prefix  = 'wp_';
+$table_prefix = 'wp_';
 
 /**
- * Pour les développeurs : le mode déboguage de WordPress.
+ * Pour les développeurs et développeuses : le mode déboguage de WordPress.
  *
  * En passant la valeur suivante à "true", vous activez l’affichage des
  * notifications d’erreurs pendant vos essais.
- * Il est fortemment recommandé que les développeurs d’extensions et
+ * Il est fortement recommandé que les développeurs et développeuses d’extensions et
  * de thèmes se servent de WP_DEBUG dans leur environnement de
  * développement.
  *
- * Pour plus d'information sur les autres constantes qui peuvent être utilisées
- * pour le déboguage, rendez-vous sur le Codex.
+ * Pour plus d’information sur les autres constantes qui peuvent être utilisées
+ * pour le déboguage, rendez-vous sur la documentation.
  *
- * @link https://codex.wordpress.org/Debugging_in_WordPress
+ * @link https://fr.wordpress.org/support/article/debugging-in-wordpress/
  */
 define('WP_DEBUG', false);
 
-/* C’est tout, ne touchez pas à ce qui suit ! */
+/* C’est tout, ne touchez pas à ce qui suit ! Bonne publication. */
 
 /** Chemin absolu vers le dossier de WordPress. */
 if ( !defined('ABSPATH') )

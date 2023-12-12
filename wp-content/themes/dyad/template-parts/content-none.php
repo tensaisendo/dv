@@ -24,12 +24,12 @@
 
 			<?php elseif ( is_search() ) : ?>
 
-				<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'dyad' ); ?></p>
+				<p><?php esc_html_e( 'Aucun résultat de recherche. Réessayez avec un autre mot-clé.', 'dyad' ); ?></p>
 				<?php get_search_form(); ?>
 
 			<?php else : ?>
 
-				<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'dyad' ); ?></p>
+				<p><?php esc_html_e( 'Impossible de trouver un résultat. Essayez de lancer une recherche.', 'dyad' ); ?></p>
 				<?php get_search_form(); ?>
 
 			<?php endif; ?>

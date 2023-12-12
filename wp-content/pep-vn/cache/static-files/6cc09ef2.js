@@ -1,1 +1,0 @@
-(function($){var home_url="http://douceursetvolupte.com/";$(window).load(function(){if(window.location.href==home_url){$('.site-description').css('display','none');}});})(jQuery);
